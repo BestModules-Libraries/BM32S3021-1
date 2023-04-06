@@ -2,23 +2,22 @@
 <img src="https://github.com/BestModules-Libraries/img/blob/main/BM32S3021-1_BMS31M002_V1.0.png" width="480" height="240"> 
 </div> 
 
-
-BMH08002-4
+BM32S3021-1
 ===========================================================
 
-The BMH08002-4 is an oximeter and heart rate module from Best Modules, which uses the UART communication method. This document provides the description of the BMH08002-4 Arduino Lib functions and how to install the Arduino Lib. The example uses the BMH83M002 module to demonstrate the function of obtaining blood oxygen, heart rate and perfusion index.
+The Best Modules BM32S3021-1 is a 1D infrared gesture control digital module, which uses the UART communication method. This document describes the Arduino Lib function of the BM32S3021-1 and how to install the Arduino Lib. The example demonstrates the function to recognize whether a gesture is swiping left or right with the BMS31M002 modle.
 
 #### Applicable types:
 <div align=center>
 
-|Type       |Description                   |
-|:---------:|:----------------------------:|
-|BMH08002-4 |Oximeter and Heart Rate Module|
-|BMH83M002  |Integrated BMH08002-4 Module  |
+|Part No.   |Description                               |
+|:---------:|:----------------------------------------:|
+|BM32S3021-1|1D infrared gesture control digital module|
+|BMS31M002  |Integrated BM32S3021-1 module             |
 
 </div> 
 
-This library can be installed via the Arduino Library manager. Search for ** BMH08002-4**. 
+This library can be installed via the Arduino Library manager. Search for ** BM32S3021-1**. 
 
 Repository Contents
 -------------------
@@ -31,7 +30,7 @@ Repository Contents
 Documentation 
 -------------------
 
-* **[ BMH08002-4 Arduino Library V1.0.1 Description v100](https://www.bestmodulescorp.com/BMH08002-4.html#tab-product2)** - Arduino Library Description.
+* **[BM32S3021-1 Arduino Library V1.0.1 Description v100](https://www.bestmodulescorp.com/bm32s3021-1.html#tab-product2)** - Arduino Library Description.
 
 Version History  
 -------------------
