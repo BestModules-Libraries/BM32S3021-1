@@ -1,0 +1,55 @@
+##############################################
+# Coloring Map For （BM32S3021-1）
+##############################################
+##############################################
+# Classes and Objects (KEYWORD1)
+##############################################
+BM32S3021_1	KEYWORD1
+##############################################
+# Methods and Functions (KEYWORD2)
+##############################################
+getINT	KEYWORD2
+getIRStatus	KEYWORD2
+distanceLearning	KEYWORD2
+getIRGestureNum	KEYWORD2
+getFWVer	KEYWORD2
+reset	KEYWORD2
+getIRDebounce	KEYWORD2
+getIRThreshold	KEYWORD2
+getIRQTrigerTime	KEYWORD2
+getIRContinutyGestureTime	KEYWORD2
+getIRFastestGestureTime	KEYWORD2
+getIRSlowestGestureTime	KEYWORD2
+setIRDebounce	KEYWORD2
+setIRThreshold	KEYWORD2
+setIRQTrigerTime	KEYWORD2
+setIRContinutyGestureTime	KEYWORD2
+setIRFastestGestureTime	KEYWORD2
+setIRSlowestGestureTime	KEYWORD2
+writeVerL	KEYWORD2
+readIR1Ref	KEYWORD2
+readIR2Ref	KEYWORD2
+readIrA2_A5	KEYWORD2
+readIrA6_Ab	KEYWORD2
+getIROPA	KEYWORD2
+getIR1Current	KEYWORD2
+getIR2Current	KEYWORD2
+setIROPA	KEYWORD2
+setIR1Current	KEYWORD2
+setIR2Current	KEYWORD2
+writeBytes	KEYWORD2
+readBytes	KEYWORD2
+##############################################
+# Constants (LITERAL1)
+##############################################
+SUCCESS	LITERAL1
+FAIL	LITERAL1
+NO_ACK	LITERAL1
+CHECK_OK	LITERAL1
+CHECK_ERROR	LITERAL1
+TIMEOUT_ERROR	LITERAL1
+_intPin	LITERAL1
+_rxPin	LITERAL1
+_txPin	LITERAL1
+
+
