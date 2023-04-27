@@ -17,7 +17,7 @@ The Best Modules BM32S3021-1 is a 1D infrared gesture control digital module, wh
 
 </div> 
 
-This library can be installed via the Arduino Library manager. Search for ** BM32S3021-1**. 
+This library can be installed via the Arduino Library manager. Search for **BM32S3021-1**. 
 
 Repository Contents
 -------------------
