@@ -35,7 +35,10 @@ Documentation
 Version History  
 -------------------
 
-* **V1.0.1** - Initial public release.
+* **V1.0.1**  
+&emsp;&emsp;- Initial public release.
+* **V1.0.2**  
+&emsp;&emsp;- Modify function:getFWVer; 
 
 License Information
 -------------------
