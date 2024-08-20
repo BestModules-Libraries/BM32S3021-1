@@ -40,9 +40,9 @@ Version History
 * **V1.0.2**  
 &emsp;&emsp;- Modify function:getFWVer(); 
 * **V1.0.3**  
-&emsp;&emsp;- Modify the ranges and default values of some function parameters;
-&emsp;&emsp;- Perfect example (distanceLearing, getGesture);
-&emsp;&emsp;- Perfect some function header comments.
+&emsp;&emsp;- Modify the ranges and default values of some function parameters;  
+&emsp;&emsp;- Perfect example (distanceLearing, getGesture);  
+&emsp;&emsp;- Perfect some function header comments.  
 License Information
 -------------------
 
