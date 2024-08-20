@@ -1,8 +1,8 @@
 /*****************************************************************
 File:             BM32S3021-1.h
-Author:           BESTMODULES
+Author:           BEST MODULES CORP.
 Description:      Define classes and required variables
-Version:          V1.0.2   -- 2023-09-14
+Version:          V1.0.3   -- 2024-08-16
 ******************************************************************/
 #ifndef _BM32S3021_1_H_
 #define _BM32S3021_1_H_
@@ -37,12 +37,12 @@ class BM32S3021_1
     uint8_t getIRContinutyGestureTime();
     uint8_t getIRFastestGestureTime();
     uint8_t getIRSlowestGestureTime();
-    uint8_t setIRDebounce(uint8_t  debounce = 16);
-    uint8_t setIRThreshold(uint8_t  threshold = 7);
+    uint8_t setIRDebounce(uint8_t  debounce = 7);
+    uint8_t setIRThreshold(uint8_t  threshold = 16);
     uint8_t setIRQTrigerTime(uint8_t  irqTime = 50);
     uint8_t setIRContinutyGestureTime(uint8_t  irTime = 30);
     uint8_t setIRFastestGestureTime(uint8_t  irTime = 0);
-    uint8_t setIRSlowestGestureTime(uint8_t  irTime = 20);
+    uint8_t setIRSlowestGestureTime(uint8_t  irTime = 80);
  
   private:
     uint8_t writeVerL(uint8_t  verl);

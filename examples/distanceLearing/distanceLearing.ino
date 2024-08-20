@@ -10,20 +10,18 @@ Description:  1.SoftwareSerial interface (BAUDRATE 9600)is used to communicate w
 connection method： intPin:D3 rxPin:D5 txPin:D4
 ******************************************************************/
 #include "BM32S3021-1.h"
-BM32S3021_1     BMS31(3,5,4); //intPin,rxPin,txPin,Please comment out this line of code if you don't use SW Serial
-//BM32S3021_1     BMS31(22,&Serial1); //Please uncomment out this line of code if you use HW Serial1 on BMduino
-//BM32S3021_1     BMS31(25,&Serial2); //Please uncomment out this line of code if you use HW Serial2 on BMduino
-//BM32S3021_1     BMS31(3,&Serial3); //Please uncomment out this line of code if you use HW Serial3 on BMduino
-//BM32S3021_1     BMS31(3,&Serial4); //Please uncomment out this line of code if you use HW Serial4 on BMduino
+BM32S3021_1     myGesture(3,5,4); //intPin,rxPin,txPin,Please comment out this line of code if you don't use SW Serial
+//BM32S3021_1     myGesture(22,&Serial1); //Please uncomment out this line of code if you use HW Serial1 on BMduino
+//BM32S3021_1     myGesture(25,&Serial2); //Please uncomment out this line of code if you use HW Serial2 on BMduino
+//BM32S3021_1     myGesture(3,&Serial3); //Please uncomment out this line of code if you use HW Serial3 on BMduino
+//BM32S3021_1     myGesture(3,&Serial4); //Please uncomment out this line of code if you use HW Serial4 on BMduino
 uint8_t irStatus = 0;
-uint8_t FastestGerstureTime= 0;
-uint8_t IRSlowestGerstureTime= 0;
 void setup() 
 {
-    BMS31.begin();
+    myGesture.begin();
     Serial.begin(9600);        //Set the communication rate between the serial monitor and BM32S3021_1 to 9600 baud rate
-    BMS31.distanceLearning();  //Start distance learn
-    irStatus = BMS31.getIRStatus();
+    myGesture.distanceLearning();  //Start distance learn
+    irStatus = myGesture.getIRStatus();
     if(!(irStatus&0x08))          //Calibration is completed when BIT3 = 0
       {
        Serial.println("Distance learning success");
@@ -36,9 +34,9 @@ void setup()
 
 void loop() 
 { 
-   if(!BMS31.getINT()) //Gets the proximity sensing state 0: approach 1:not approach 
+   if(!myGesture.getINT()) //Gets the proximity sensing state 0: approach 1:not approach 
    {
-     irStatus = BMS31.getIRStatus();  //Read near inductive state
+     irStatus = myGesture.getIRStatus();  //Read near inductive state
      if(!(irStatus&0x08))          //Calibration is completed when BIT3 = 0
       {
         if(irStatus&0x02)         //Swipe right gesture works

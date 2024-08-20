@@ -1,8 +1,8 @@
 /*****************************************************************
 File:             BM32S3021-1.cpp
-Author:           BESTMODULES
+Author:           BEST MODULES CORP.
 Description:      UART communication with the BM32S3021_1 and obtain the corresponding value  
-Version:          V1.0.2   -- 2023-09-14
+Version:          V1.0.3   -- 2024-08-16
 ******************************************************************/
 #include "BM32S3021-1.h"
 /**********************************************************
@@ -76,8 +76,8 @@ uint8_t BM32S3021_1::getINT()
 /**********************************************************
 Description: Get IR Induction state
 Parameters:   
-Return:      irStatus&0x08==0: calibration not approach 
-             irStatus&0x08==1:
+Return:      irStatus&0x08==1: calibration 
+             irStatus&0x08==0:
                                 irStatus&0x04== : 
                                                  1 : Swipe left 
                                                  0 : not Swipe left 
@@ -115,7 +115,6 @@ uint8_t BM32S3021_1::distanceLearning()
 {
     uint8_t sendBuf[3] = {0x55, 0x19, 0x6E};
     uint8_t buff[3] = {0};
-    uint8_t value = 0;
     writeBytes(sendBuf,3);
     if(readBytes(buff,3)== CHECK_OK)
     {
@@ -160,8 +159,8 @@ uint16_t BM32S3021_1::getFWVer()
     uint8_t sendBuf1[5] = {0x55, 0x80, 0x00, 0x01,0xD6};
     uint8_t sendBuf2[5] = {0x55, 0x80, 0x01, 0x01,0xD7};
     uint8_t buff[6] = {0};
-    uint8_t verh,verl = 0;
-    uint8_t temp = 0;
+    uint8_t verh = 0;
+    uint8_t verl = 0;
     uint16_t ver = 0;
     writeBytes(sendBuf1,5);
     if(readBytes(buff,6)== CHECK_OK)
@@ -189,7 +188,6 @@ uint8_t BM32S3021_1::reset()
 {
     uint8_t sendBuf[3] = {0x55, 0x10, 0x65};
     uint8_t buff[3] = {0};
-    uint8_t value = 0;
     writeBytes(sendBuf,3);
     if(readBytes(buff,3)== CHECK_OK)
     {
@@ -466,11 +464,11 @@ uint8_t BM32S3021_1::setIRFastestGestureTime(uint8_t  irTime)
 /**********************************************************
 Description: Set IR Slowest gesture time
 Parameters:  irqTime: Slowest gesture to judge time
-                      parameter range: 0 ~ 200 (Default 20)     
+                      parameter range: 0 ~ 200 (Default 80)     
 Output:         
 Return:      Communication status  0:Success 1:Fail   
 Others:      The calculation formula of IRQ trigger time is as follows:
-             irTime×64ms, (default 20×64ms=1.28s)
+             irTime×16ms, (default 80×16ms=1.28s)
 **********************************************************/
 uint8_t BM32S3021_1::setIRSlowestGestureTime(uint8_t  irTime)
 {
@@ -502,7 +500,6 @@ Others:      If the low byte is set to 0XAA, you can set the Current and OPA
 uint8_t BM32S3021_1::writeVerL(uint8_t  verl)
 {
     uint8_t sendBuf[6] = {0x55, 0xC0, 0x00, 0x01, 0x00, 0X00};
-    uint8_t temp = 0;
     uint8_t buff[3] = {0};
     sendBuf[4] = verl;
     sendBuf[5] = 22+verl;
@@ -573,9 +570,7 @@ Others:      buff[0] : IR Status
 uint8_t BM32S3021_1::readIrA2_A5(uint8_t  buff[])
 {
     uint8_t sendBuf[5] = {0x55, 0x80, 0x02, 0x04, 0xDB};
-    uint8_t value = 0;
     uint8_t rbuf[9] ={0};
-    uint8_t Cnt = 0;
     writeBytes(sendBuf,5);
     if(readBytes(rbuf,9)== CHECK_OK)
     {
@@ -608,9 +603,7 @@ Others:      buff[0] : IR Debounce
 uint8_t BM32S3021_1::readIrA6_Ab(uint8_t  buff[])
 {
     uint8_t sendBuf[5] = {0x55, 0x80, 0x06, 0x06, 0xE1};
-    uint8_t value = {0};
     uint8_t rbuf[11] ={0};
-    uint8_t Cnt = 0;
     writeBytes(sendBuf,5);
     if(readBytes(rbuf,11)== CHECK_OK)
     {
