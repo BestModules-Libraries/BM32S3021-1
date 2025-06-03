@@ -1,6 +1,6 @@
 /*****************************************************************
 File:         getGesture.ino
-Description:  1.SoftwareSerial interface (BAUDRATE 9600)is used to communicate with BMS31M002.
+Description:  1.SoftwareSerial interface (BAUDRATE 9600)is used to communicate with BM32S3021_1.
               2.hardware Serial (BAUDRATE 9600) is used to communicate with Serial port monitor.
                 When there is a gesture,read the proximity sensor status displayed on the serial port monitor.
               3.Slide the left and the serial port monitor prints "Swipe left".

@@ -2,7 +2,7 @@
 File:             BM32S3021-1.cpp
 Author:           BEST MODULES CORP.
 Description:      UART communication with the BM32S3021_1 and obtain the corresponding value  
-Version:          V1.0.3   -- 2024-08-16
+Version:          V1.0.4   -- 2025-03-13
 ******************************************************************/
 #include "BM32S3021-1.h"
 /**********************************************************

@@ -5,7 +5,7 @@
 BM32S3021-1
 ===========================================================
 
-The Best Modules BM32S3021-1 is a 1D infrared gesture control digital module, which uses the UART communication method. This document describes the Arduino Lib function of the BM32S3021-1 and how to install the Arduino Lib. The example demonstrates the function to recognize whether a gesture is swiping left or right with the BMS31M002 modle.
+The Best Modules BM32S3021-1 is a 1D infrared gesture control digital module, which uses the UART communication method. This document describes the Arduino Lib function of the BM32S3021-1 and how to install the Arduino Lib. The example demonstrates the function to recognize whether a gesture is swiping left or right with the BMS31M002/BMS31M002A modle.
 
 #### Applicable types:
 <div align=center>
@@ -14,6 +14,7 @@ The Best Modules BM32S3021-1 is a 1D infrared gesture control digital module, wh
 |:---------:|:----------------------------------------:|
 |BM32S3021-1|1D infrared gesture control digital module|
 |BMS31M002  |Integrated BM32S3021-1 module             |
+|BMS31M002A |Integrated BM32S3021-1 module             |
 
 </div> 
 
@@ -43,6 +44,9 @@ Version History
 &emsp;&emsp;- Modify the ranges and default values of some function parameters;  
 &emsp;&emsp;- Perfect example (distanceLearing, getGesture);  
 &emsp;&emsp;- Perfect some function header comments.  
+* **V1.0.4**  
+&emsp;&emsp;- Add applicable models: BMS31M002A;   
+
 License Information
 -------------------
 
